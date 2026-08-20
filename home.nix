@@ -2,7 +2,7 @@
 
 {
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  
+
   nix.package = pkgs.nix;
 
   home.username = "buber"; # Change to your username
@@ -35,7 +35,7 @@
         zoxide init fish | source
       end
       starship init fish | source
-      
+
          '';
     shellAliases = {
       ll = "eza -l --icons";
@@ -64,7 +64,7 @@ cursor_shape beam
 scrollback_lines 10000
 repaint_delay 6
 sync_to_monitor yes
-confirm_os_window_close 0 
+confirm_os_window_close 0
 
 # Tab bar
 tab_bar_edge            top
@@ -86,8 +86,8 @@ shell fish
 
 # Include Noctalia's dynamically generated color palette
       include noctalia.conf
-    
-'';
+
+  '';
   };
   # --- Starship Prompt Configuration ---
   programs.starship = {
@@ -118,9 +118,9 @@ shell fish
     fastfetch
     btop
     zoxide
-    
+
   ];
-  
+
 # xdg.configFile."mimeapps.list".force = true;
 xdg.configFile."nix/nix.conf".force = true;
 
