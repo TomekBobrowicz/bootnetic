@@ -40,14 +40,19 @@ modules:
           --experimental \
           --from repo='copr:copr.fedorainfracloud.org:theblackdon:kineticwe' \
           kwin-common \
-          || dnf swap -y kwin-common kineticwe
+
+          rpm-ostree override replace \
+          --experimental \
+          --from repo='copr:copr.fedorainfracloud.org:lionheartp:Hyprland' \
+          noctalia-shell-v5 \
+          || dnf swap -y noctalia-shell-v5 noctalia-git
 
   # ============================================================
   # RPM packages
   # ============================================================
   - type: rpm-ostree
     install:
-      #- noctalia-git
+      - noctalia-git
       - qt5ct
       - qt6ct
       - nwg-look
