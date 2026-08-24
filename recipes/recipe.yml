@@ -47,7 +47,7 @@ modules:
   # ============================================================
   - type: rpm-ostree
     install:
-      - noctalia-git
+      - noctalia
       - qt5ct
       - qt6ct
       - nwg-look
