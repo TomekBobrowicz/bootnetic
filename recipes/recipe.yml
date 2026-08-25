@@ -42,12 +42,16 @@ modules:
           kwin-common \
           || dnf swap -y kwin-common kineticwe
 
+        echo "=== Installing Noctalia Git ==="    
+
+        dnf swap -y --no-weak-deps noctalia-shell-v5 noctalia-git
 
   # ============================================================
   # RPM packages
   # ============================================================
   - type: rpm-ostree
     install:
+      - noctalia-git
       - qt5ct
       - qt6ct
       - nwg-look
