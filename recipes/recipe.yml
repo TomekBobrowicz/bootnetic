@@ -41,13 +41,12 @@ modules:
         echo "=== Installing Noctalia Git ==="
 
         dnf install -y --setopt=install_weak_deps=False noctalia-git  
-        
+
   # ============================================================
   # RPM packages
   # ============================================================
   - type: rpm-ostree
     install:
-      - noctalia-git
       - qt5ct
       - qt6ct
       - nwg-look
